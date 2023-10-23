@@ -1,0 +1,2 @@
+feast
+psycopg2-binary

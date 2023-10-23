@@ -1,0 +1,13 @@
+project: credit_scoring_aws
+provider: local
+online_store:
+  type: sqlite
+  path: data/online_store.db
+offline_store:
+  type: file
+registry:
+  # "registry.db"
+  # # "../your-feast-ui/public/registry.db"
+  registry_type: sql
+  path: postgresql://postgres:password@localhost:5432/credit_scoring_aws
+  cache_ttl_seconds: 60

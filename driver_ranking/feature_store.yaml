@@ -1,0 +1,14 @@
+project: driver_ranking
+# By default, the registry is a file (but can be turned into a more scalable SQL-backed registry)
+registry:
+  # "registry.db"
+  # "../your-feast-ui/public/registry.db"
+  registry_type: sql
+  path: postgresql://postgres:password@localhost:5432/driver_ranking
+  cache_ttl_seconds: 60
+# The provider primarily specifies default offline / online stores & storing the registry in a given cloud
+provider: local
+online_store:
+  type: sqlite
+  path: data/online_store.db
+entity_key_serialization_version: 2
